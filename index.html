@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Página informativa sobre CSS con explicaciones y ejemplos de sintaxis, diseño adaptable y detalles visuales.">
+  <title>CSS: estilo para la web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container d-flex align-items-center justify-content-between">
+      <span class="brand">CSS</span>
+      <span class="header-colors" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-12 col-lg-5 hero-copy">
+            <h1 id="hero-title">CSS: estilo<br>para la web</h1>
+            <p class="hero-lead">CSS, u hojas de estilo en cascada, define cómo se ven los elementos de una página: sus colores, espacios, tamaños y distribución. Junto con HTML, permite crear interfaces claras y adaptarlas a diferentes pantallas.</p>
+            <p class="hero-extra">Con los selectores elegimos qué elementos cambiar; con las propiedades definimos su apariencia. Si varias reglas coinciden, la cascada y la especificidad determinan cuál se aplica.</p>
+          </div>
+          <div class="col-12 col-lg-7">
+            <div class="hero-art" aria-hidden="true">
+              <div class="art-blob art-blob-lilac"></div>
+              <div class="art-blob art-blob-mint"></div>
+              <div class="art-window art-window-back"><span></span><span></span><span></span><i></i><i></i><i></i></div>
+              <div class="art-window art-window-front"><span></span><span></span><span></span><i></i><i></i><i></i></div>
+              <div class="art-css">CSS<span>3</span></div>
+              <div class="art-braces">{ }</div>
+              <div class="art-devices"><b></b><b></b></div>
+              <div class="art-swatches"><span></span><span></span><span></span><span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="css-overview" aria-labelledby="overview-title">
+      <div class="container">
+        <div class="row gy-4 gx-lg-5">
+          <div class="col-12 col-lg-3">
+            <h2 id="overview-title">¿Qué permite hacer CSS?</h2>
+          </div>
+          <div class="col-12 col-sm-4 col-lg-3 overview-item">
+            <span class="overview-dot overview-dot-peach" aria-hidden="true"></span>
+            <h3>Dar personalidad</h3>
+            <p>Elegir colores, tipografías, bordes y espacios para que el contenido sea claro y agradable.</p>
+          </div>
+          <div class="col-12 col-sm-4 col-lg-3 overview-item">
+            <span class="overview-dot overview-dot-lilac" aria-hidden="true"></span>
+            <h3>Organizar</h3>
+            <p>Distribuir textos e imágenes con herramientas como Flexbox y Grid.</p>
+          </div>
+          <div class="col-12 col-sm-4 col-lg-3 overview-item">
+            <span class="overview-dot overview-dot-blue" aria-hidden="true"></span>
+            <h3>Adaptar</h3>
+            <p>Cambiar la distribución según el tamaño de la pantalla mediante media queries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter-foundations" aria-labelledby="fundamentos-title">
+      <div class="container">
+        <div class="chapter-heading">
+          <span class="chapter-mark">01 / 03</span>
+          <h2 id="fundamentos-title">Fundamentos</h2>
+          <p>Las bases de CSS: cómo se escribe, dónde se incorpora y qué ocurre cuando varias reglas quieren cambiar el mismo elemento.</p>
+        </div>
+
+        <div class="row g-4 g-lg-5">
+          <article class="col-12 col-lg-6 topic" aria-labelledby="tema-21">
+            <div class="topic-heading"><span class="topic-number">2.1</span><h3 id="tema-21">Estructura y sintaxis</h3></div>
+            <p>Una regla CSS tiene un <strong>selector</strong>, que indica qué elemento se modifica, y una o varias declaraciones formadas por <strong>propiedad</strong> y <strong>valor</strong>. Las declaraciones se escriben entre llaves y terminan en punto y coma.</p>
+            <div class="code-sample" aria-label="Ejemplo de una regla CSS"><code><span class="code-selector">h1</span> {<br>&nbsp;&nbsp;<span class="code-property">color</span>: <span class="code-value">#436f72</span>;<br>}</code></div>
+            <div class="syntax-legend" aria-hidden="true"><span>h1 <small>selector</small></span><span>color <small>propiedad</small></span><span>#436f72 <small>valor</small></span></div>
+            <p class="example"><strong>Ejemplo:</strong> esta regla cambia el color de todos los títulos <code>&lt;h1&gt;</code> de la página.</p>
+          </article>
+
+          <article class="col-12 col-lg-6 topic" aria-labelledby="tema-22">
+            <div class="topic-heading"><span class="topic-number">2.2</span><h3 id="tema-22">Tipos de incorporación CSS</h3></div>
+            <p>Los estilos pueden escribirse dentro del documento HTML, en un archivo CSS separado o directamente en un elemento. El archivo externo facilita reutilizar los mismos estilos en varias páginas.</p>
+            <div class="methods row g-2" aria-label="Tres formas de incorporar CSS">
+              <div class="col-4"><div class="method method-lilac"><strong>Interno</strong><code>&lt;style&gt;</code><small>En el HTML</small></div></div>
+              <div class="col-4"><div class="method method-mint"><strong>Externo</strong><code>estilos.css</code><small>En otro archivo</small></div></div>
+              <div class="col-4"><div class="method method-peach"><strong>En línea</strong><code>style="..."</code><small>En la etiqueta</small></div></div>
+            </div>
+            <p class="example"><strong>Ejemplo:</strong> un mismo archivo <code>estilos.css</code> puede dar apariencia coherente a la página de inicio y a la página de contacto.</p>
+          </article>
+
+          <article class="col-12 col-lg-6 topic" aria-labelledby="tema-23">
+            <div class="topic-heading"><span class="topic-number">2.3</span><h3 id="tema-23">Indentación, herencia y comentarios</h3></div>
+            <p>La <strong>indentación</strong> ordena el código y facilita su lectura. Algunas propiedades, como <code>color</code>, se <strong>heredan</strong> de un elemento padre a sus hijos. Los <strong>comentarios</strong> documentan decisiones y el navegador los ignora.</p>
+            <div class="inheritance-demo" aria-hidden="true"><span class="inheritance-parent">Elemento padre<br><small>color: verde azulado</small></span><span class="inheritance-children"><span>Texto hijo<br><small>hereda el color</small></span><span>Otro hijo<br><small>hereda el color</small></span></span></div>
+            <p class="example"><strong>Ejemplo:</strong> si <code>body</code> tiene un color de texto, sus párrafos lo heredan mientras ninguna regla más específica les asigne otro.</p>
+          </article>
+
+          <article class="col-12 col-lg-6 topic" aria-labelledby="tema-24">
+            <div class="topic-heading"><span class="topic-number">2.4</span><h3 id="tema-24">Niveles de especificidad</h3></div>
+            <p>Cuando varias reglas del mismo origen y nivel afectan una propiedad, la especificidad ayuda a decidir cuál gana. En términos generales, un estilo en línea pesa más que un ID; un ID pesa más que una clase, y una clase más que una etiqueta.</p>
+            <div class="specificity-demo" aria-label="Orden general de especificidad"><span>En línea</span><b>&gt;</b><span>#id</span><b>&gt;</b><span>.clase</span><b>&gt;</b><span>etiqueta</span></div>
+            <p class="example"><strong>Ejemplo:</strong> si <code>.titulo</code> da color azul y <code>#principal</code> da color verde al mismo título, prevalece el ID entre esas dos reglas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter-layout" aria-labelledby="adaptable-title">
+      <div class="container">
+        <div class="chapter-heading">
+          <span class="chapter-mark">02 / 03</span>
+          <h2 id="adaptable-title">Diseño adaptable</h2>
+          <p>CSS organiza el contenido y permite que una misma página funcione bien en computadores, tabletas y celulares.</p>
+        </div>
+
+        <div class="row g-4 g-lg-5">
+          <article class="col-12 col-lg-6 topic" aria-labelledby="tema-25">
+            <div class="topic-heading"><span class="topic-number">2.5</span><h3 id="tema-25">Flexbox, Grid y breakpoints</h3></div>
+            <p><strong>Flexbox</strong> distribuye elementos en una dirección, como una fila de navegación. <strong>Grid</strong> organiza filas y columnas, como una galería. Los <strong>breakpoints</strong> son anchos de pantalla en los que el diseño cambia.</p>
+            <div class="layout-demos" aria-hidden="true"><div><small>Flexbox · menú</small><div class="flex-demo"><span>Inicio</span><span>Guía</span><span>Recursos</span></div></div><div><small>Grid · galería</small><div class="grid-demo"><span></span><span></span><span></span><span></span><span></span><span></span></div></div></div>
+            <p class="example"><strong>Ejemplo:</strong> Flexbox alinea los enlaces del menú; Grid coloca seis imágenes en tres columnas.</p>
+          </article>
+
+          <article class="col-12 col-lg-6 topic" aria-labelledby="tema-26">
+            <div class="topic-heading"><span class="topic-number">2.6</span><h3 id="tema-26">Media queries</h3></div>
+            <p>Una <em>media query</em> aplica reglas CSS solo cuando se cumple una condición, como el ancho de la pantalla. Así se pueden ajustar columnas, tamaños y espacios sin crear páginas diferentes.</p>
+            <div class="responsive-demo" aria-hidden="true"><div class="screen-wide"><span></span><span></span></div><span class="demo-arrow">→</span><div class="screen-small"><span></span><span></span></div></div>
+            <div class="code-sample code-sample-small"><code><span class="code-selector">@media</span> (max-width: 767px) {<br>&nbsp;&nbsp;.columnas { grid-template-columns: 1fr; }<br>}</code></div>
+            <p class="example"><strong>Ejemplo:</strong> una zona con dos columnas en computador se convierte en una columna en celular.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter-details" aria-labelledby="detalles-title">
+      <div class="container">
+        <div class="chapter-heading">
+          <span class="chapter-mark">03 / 03</span>
+          <h2 id="detalles-title">Detalles visuales</h2>
+          <p>Estas herramientas permiten añadir detalles, responder a estados del usuario y controlar qué elemento aparece delante de otro.</p>
+        </div>
+
+        <div class="row g-4 g-lg-5">
+          <article class="col-12 col-md-6 col-lg-4 topic" aria-labelledby="tema-27">
+            <div class="topic-heading"><span class="topic-number">2.7</span><h3 id="tema-27">Pseudoelementos</h3></div>
+            <p>Permiten dar estilo a una parte concreta de un elemento o crear un detalle decorativo con <code>::before</code> y <code>::after</code>, sin añadir otra etiqueta HTML.</p>
+            <div class="pseudo-element-demo" aria-hidden="true"><span>✦ Consejo</span><small>La estrella se añade con ::before</small></div>
+            <p class="example"><strong>Ejemplo:</strong> colocar una estrella antes del título de una nota.</p>
+          </article>
+
+          <article class="col-12 col-md-6 col-lg-4 topic" aria-labelledby="tema-28">
+            <div class="topic-heading"><span class="topic-number">2.8</span><h3 id="tema-28">Pseudoclases</h3></div>
+            <p>Seleccionan un elemento según su estado o posición. <code>:hover</code> actúa cuando pasa el cursor; <code>:focus</code> cuando recibe el foco; <code>:first-child</code> selecciona al primer hijo.</p>
+            <div class="pseudo-class-demo" aria-hidden="true"><span>Enlace normal</span><b>→</b><span>Enlace al pasar el cursor</span></div>
+            <p class="example"><strong>Ejemplo:</strong> un enlace cambia de color al pasar el cursor sobre él.</p>
+          </article>
+
+          <article class="col-12 col-md-12 col-lg-4 topic" aria-labelledby="tema-29">
+            <div class="topic-heading"><span class="topic-number">2.9</span><h3 id="tema-29">Z-index</h3></div>
+            <p>Controla el orden de apilamiento de elementos que se superponen. Un valor mayor suele colocar un elemento por delante dentro de su mismo contexto de apilamiento.</p>
+            <div class="z-demo" aria-hidden="true"><div class="z-image">Imagen · z-index: 1</div><div class="z-menu">Menú · z-index: 2</div></div>
+            <p class="example"><strong>Ejemplo:</strong> un menú desplegable queda visible por encima de la imagen de la página.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-2"><strong>CSS</strong><span>Aprende con conceptos y ejemplos</span></div></footer>
+</body>
+</html>
